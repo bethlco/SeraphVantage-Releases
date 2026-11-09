@@ -6,7 +6,9 @@ This is the official downloads repository for **Seraph Aero Vantage**, published
 
 ## Download for Windows
 
-The first public installer is being prepared. When published, the signed installer and matching source materials will appear under [Releases](https://github.com/bethlco/SeraphVantage-Releases/releases) and on the [Vantage download page](https://www.seraphaero.com/download/).
+Download the signed **0.51.45 Windows beta** from the [Vantage download page](https://www.seraphaero.com/download/) or [release assets](https://github.com/bethlco/SeraphVantage-Releases/releases/tag/v0.51.45). Matching source materials and checksums are included in the release.
+
+This beta passed existing-PC uninstall/reinstall and account-access checks. Clean-machine installation testing remains incomplete.
 
 Downloading Vantage is free. During beta, opening the workspace requires a BETHL account and an active **$1/month beta subscription**. Account creation, subscriptions and payments are handled on the [Seraph website](https://www.seraphaero.com/).
 
