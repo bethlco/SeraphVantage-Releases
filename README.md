@@ -12,18 +12,20 @@ This beta passed existing-PC uninstall/reinstall and account-access checks. Clea
 
 Downloading Vantage is free. During beta, opening the workspace requires a BETHL account and an active **$1/month beta subscription**. Account creation, subscriptions and payments are handled on the [Seraph website](https://www.seraphaero.com/).
 
-## Mission waypoint capabilities
+## Mission and Code development verification
 
-Mission waypoints can be brought into Autonomy and generated as Python in Code. This is a **computer-side mission runner**, not an onboard ArduPilot or PX4 flight program.
+The following changes have passed development checks and are awaiting a future installer release. **They are not included in the current 0.51.45 download.**
 
-| Workflow | Current status |
+| Workflow | Verified behavior and limits |
 | --- | --- |
-| Saved waypoints → generated code | Verified: waypoint order, coordinates, ground-relative altitude and speed are preserved. |
-| Offline mission logic | Verified: supplied scenario events complete, stop on missing results or follow failure outcomes. This does not simulate flight physics. |
-| Upload this Python mission to a flight controller | Unavailable. Controller uploads reject this file; Launch and Navigate have no bundled flight adapter. |
-| Fly the route on actual firmware or hardware | Not verified or supported by this generated mission path. |
+| Saved waypoints → Code → onboard mission | Flight-only routes compile to native missions for ArduPilot 4.7.1 and PX4 1.16.0 quadcopters. Python itself does not run on the controller. |
+| Review and upload | Review takeoff-relative heights, controller-managed timing and end behavior. Upload saves a recovery copy and verifies the controller's mission contents. It does not arm or start the aircraft. |
+| Actual firmware simulation | Both firmwares passed waypoint routes with return/landing, wait → return home → land, and hold until the simulated pilot lands. Both also passed interrupted-upload recovery and mission restoration. |
+| Companion Python | Reviewed file transfer preserves folders and generated integration helpers. Optional Upload & run executes the selected Python entry file with a five-minute limit. Python 3, the standard timeout utility and implemented integrations are required. |
+| Complex or unsupported mission logic | Branches, loops, dynamic inputs and unsupported flight actions are rejected by native compilation. Companion execution still needs working integration drivers; there is no universal flight/sensor adapter. |
+| Physical aircraft | Not validated by these checks. No physical installation or flight support is claimed. |
 
-Development checks on November 11, 2026 passed 29 route, mission and delivery tests plus desktop checks. The requirements dropdown fix passed light/dark layout, collapse and selection checks at three window sizes. These source changes are awaiting a future installer release; the **0.51.45 download is unchanged**.
+Development checks on November 12, 2026 passed **72 automated tests**, desktop upload/recovery checks in light and dark modes, a production build, and **six actual-firmware simulation scenarios** across the two firmware versions. Companion tests used real SSH/SFTP and local Python with a controlled execution endpoint, not a physical Raspberry Pi. Earlier requirements dropdown checks passed layout, collapse and selection at three window sizes.
 
 ## Verify a download
 
