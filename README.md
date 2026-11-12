@@ -6,15 +6,15 @@ This is the official downloads repository for **Seraph Aero Vantage**, published
 
 ## Download for Windows
 
-Download the signed **0.51.45 Windows beta** from the [Vantage download page](https://www.seraphaero.com/download/) or [release assets](https://github.com/bethlco/SeraphVantage-Releases/releases/tag/v0.51.45). Matching source materials and checksums are included in the release.
+Download the signed **0.51.46 Windows beta** from the [Vantage download page](https://www.seraphaero.com/download/) or [release assets](https://github.com/bethlco/SeraphVantage-Releases/releases/tag/v0.51.46). Matching source materials and checksums are included in the release.
 
-This beta passed existing-PC uninstall/reinstall and account-access checks. Clean-machine installation testing remains incomplete.
+This beta passed existing-PC upgrade, uninstall and reinstall, preserving 26 project files and 44 additional protected files. The packaged app and installed copy each passed two fresh-profile account-gate launches. Clean-machine installation testing remains incomplete.
 
 Downloading Vantage is free. During beta, opening the workspace requires a BETHL account and an active **$1/month beta subscription**. Account creation, subscriptions and payments are handled on the [Seraph website](https://www.seraphaero.com/).
 
-## Mission and Code development verification
+## Mission and Code verification
 
-The following changes have passed development checks and are awaiting a future installer release. **They are not included in the current 0.51.45 download.**
+The signed **0.51.46** installer includes the following mission and Code workflows.
 
 | Workflow | Verified behavior and limits |
 | --- | --- |
@@ -25,7 +25,7 @@ The following changes have passed development checks and are awaiting a future i
 | Complex or unsupported mission logic | Branches, loops, dynamic inputs and unsupported flight actions are rejected by native compilation. Companion execution still needs working integration drivers; there is no universal flight/sensor adapter. |
 | Physical aircraft | Not validated by these checks. No physical installation or flight support is claimed. |
 
-Development checks on November 12, 2026 passed **72 automated tests**, desktop upload/recovery checks in light and dark modes, a production build, and **six actual-firmware simulation scenarios** across the two firmware versions. Companion tests used real SSH/SFTP and local Python with a controlled execution endpoint, not a physical Raspberry Pi. Earlier requirements dropdown checks passed layout, collapse and selection at three window sizes.
+Release checks on November 12, 2026 passed **1,480 automated tests**, desktop upload/recovery checks in light and dark modes, a production build, and **six actual-firmware simulation scenarios** across the two firmware versions. Companion tests used real SSH/SFTP and local Python with a controlled execution endpoint, not a physical Raspberry Pi. Earlier requirements dropdown checks passed layout, collapse and selection at three window sizes.
 
 ## Verify a download
 
