@@ -6,15 +6,15 @@ This is the official downloads repository for **Seraph Aero Vantage**, published
 
 ## Download for Windows
 
-Download the signed **0.51.46 Windows beta** from the [Vantage download page](https://www.seraphaero.com/download/) or [release assets](https://github.com/bethlco/SeraphVantage-Releases/releases/tag/v0.51.46). Matching source materials and checksums are included in the release.
+Download the signed **0.51.48 Windows beta** from the [Vantage download page](https://www.seraphaero.com/download/) or [release assets](https://github.com/bethlco/SeraphVantage-Releases/releases/tag/v0.51.48). Matching source materials and checksums are included in the release.
 
-This beta passed existing-PC upgrade, uninstall and reinstall, preserving 26 project files and 44 additional protected files. The packaged app and installed copy each passed two fresh-profile account-gate launches. Clean-machine installation testing remains incomplete.
+This beta passed an upgrade on the existing test PC, preserving 26 project files and 54 additional protected files. The packaged app and installed copy each passed two fresh-profile account-gate launches. Clean-machine installation testing remains incomplete.
 
 Downloading Vantage is free. During beta, opening the workspace requires a BETHL account and an active **$1/month beta subscription**. Account creation, subscriptions and payments are handled on the [Seraph website](https://www.seraphaero.com/).
 
 ## Mission and Code verification
 
-The signed **0.51.46** installer includes the following mission and Code workflows.
+These mission and Code workflows were first verified for the signed 0.51.46 release.
 
 | Workflow | Verified behavior and limits |
 | --- | --- |
@@ -29,7 +29,7 @@ Release checks on November 12, 2026 passed **1,480 automated tests**, desktop up
 
 ## Motor and ESC bench testing
 
-Prepared for a future installer release. The updated Motors / ESCs panel uses a top-down X500. The selected propeller's animation speed follows the requested output, and results save automatically with the controller response and any reported ESC RPM. The preflight dialog explains the physical safety switch and requires the aircraft to remain disarmed.
+The signed 0.51.48 installer includes the updated Motors / ESCs panel and top-down X500. The selected propeller's animation speed follows the requested output. Typing or pasting more than 15% resets the field to 15%. Results save automatically with the controller response and any reported ESC RPM. The preflight dialog explains the physical safety switch and requires the aircraft to remain disarmed.
 
 On November 21, 2026, 1,482 automated tests and desktop checks in both themes passed. ArduCopter 4.7.1 simulation verified all four motor outputs, automatic cutoff, and manual Stop. Physical hardware testing remains pending.
 
