@@ -27,6 +27,12 @@ The signed **0.51.46** installer includes the following mission and Code workflo
 
 Release checks on November 12, 2026 passed **1,480 automated tests**, desktop upload/recovery checks in light and dark modes, a production build, and **six actual-firmware simulation scenarios** across the two firmware versions. Companion tests used real SSH/SFTP and local Python with a controlled execution endpoint, not a physical Raspberry Pi. Earlier requirements dropdown checks passed layout, collapse and selection at three window sizes.
 
+## Motor and ESC bench testing
+
+Prepared for a future installer release. The updated Motors / ESCs panel uses a top-down X500. The selected propeller's animation speed follows the requested output, and results save automatically with the controller response and any reported ESC RPM. The preflight dialog explains the physical safety switch and requires the aircraft to remain disarmed.
+
+On November 21, 2026, 1,482 automated tests and desktop checks in both themes passed. ArduCopter 4.7.1 simulation verified all four motor outputs, automatic cutoff, and manual Stop. Physical hardware testing remains pending.
+
 ## Verify a download
 
 Published installers are signed by **BETHL LLC**. In Windows, open the installer's Properties → Digital Signatures to inspect its signature. Each release includes `SHA256SUMS.txt` to check that the downloaded files match the published files.
